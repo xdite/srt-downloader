@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+
+require 'srt-downloader'
+require 'optparse'
+
+
+options = {}
+
+optparse = OptionParser.new do |opts|
+end
+
+
+begin
+  optparse.parse!
+  filename = ARGV.pop
+  raise "Need to specify a file" unless filename
+
+  Srt::Downloader.new(filename).download
+
+rescue OptionParser::ParseError
+  $stderr.print "Error: " + $! + "\n"
+  exit
+end
