@@ -4,7 +4,7 @@ Auto subtitle downloader for video file based on File Hash match.
 
 ## Installation
 
-`gem install srt-download`
+`gem install srt-downloader`
 
 
 ## Usage
